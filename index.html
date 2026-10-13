@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TapiceríaNicoD: restauración y tapizado de muebles con calidad y estilo.">
+  <title>TapiceríaNicoD | Tapicería y restauración</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #242424;
+      line-height: 1.6;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #17191c;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #ffb51b;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ffb51b;
+    }
+
+    .hero {
+      min-height: 420px;
+      padding: 80px 8%;
+      display: flex;
+      align-items: center;
+      color: white;
+      background:
+        linear-gradient(90deg, #111c 0%, #1118 55%, #1112 100%),
+        url("https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1800&q=85")
+        center/cover;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.15;
+      margin-bottom: 15px;
+    }
+
+    .hero h1 span {
+      color: #ffb51b;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 520px;
+      margin-bottom: 25px;
+    }
+
+    .boton {
+      display: inline-block;
+      background: #ffb51b;
+      color: #17191c;
+      padding: 13px 23px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 7px;
+    }
+
+    .boton:hover {
+      background: #f4ca68;
+    }
+
+    section {
+      padding: 55px 7%;
+      text-align: center;
+      scroll-margin-top: 20px;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .subtitulo {
+      color: #626262;
+      margin-bottom: 30px;
+    }
+
+    .servicios, .galeria {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 30px;
+    }
+
+    .servicio, .trabajo {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 3px 12px #00000010;
+    }
+
+    .servicio {
+      padding: 25px 18px;
+    }
+
+    .servicio .icono {
+      font-size: 38px;
+    }
+
+    .servicio h3, .trabajo h3 {
+      margin: 10px 0;
+    }
+
+    .trabajo img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .trabajo h3 {
+      padding: 0 12px 15px;
+    }
+
+    #nosotros {
+      background: white;
+    }
+
+    #nosotros p {
+      max-width: 750px;
+      margin: 10px auto;
+    }
+
+    #contacto {
+      background: #e9e9e9;
+    }
+
+    #contacto p {
+      margin: 12px 0 22px;
+    }
+
+    footer {
+      background: #17191c;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+
+    footer span {
+      color: #ffb51b;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .logo {
+        font-size: 24px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 12px 16px;
+      }
+
+      .hero {
+        min-height: 380px;
+        padding: 55px 7%;
+        background-position: center;
+      }
+
+      .servicios, .galeria {
+        grid-template-columns: 1fr;
+      }
+
+      section h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">Tapicería<span>NicoD</span></div>
+
+    <nav aria-label="Menú principal">
+      <a href="#inicio">Inicio</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="hero" id="inicio">
+      <div>
+        <h1>Bienvenido a<br>Tapicería<span>NicoD</span></h1>
+        <p>Damos nueva vida a tus muebles con calidad,
+          creatividad y dedicación.</p>
+        <a class="boton"
+           href="#contacto">Solicita tu presupuesto</a>
+      </div>
+    </div>
+
+    <section id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p class="subtitulo">Renovamos tus muebles a tu gusto.</p>
+
+      <div class="servicios">
+        <article class="servicio">
+          <div class="icono">🛋️</div>
+          <h3>Tapizado de sofás</h3>
+          <p>Renovación de sofás y muebles para tu hogar.</p>
+        </article>
+
+        <article class="servicio">
+          <div class="icono">🪑</div>
+          <h3>Tapizado de sillas</h3>
+          <p>Restauramos sillas de comedor y oficina.</p>
+        </article>
+
+        <article class="servicio">
+          <div class="icono">✨</div>
+          <h3>Restauración</h3>
+          <p>Mejoramos la apariencia y comodidad de tus muebles.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Nuestros trabajos</h2>
+      <p class="subtitulo">
+        Cada detalle cuenta. Conoce algunos estilos de muebles.
+      </p>
+
+      <div class="galeria">
+        <article class="trabajo">
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=700&q=80"
+            alt="Sofá moderno">
+          <h3>Sofás</h3>
+        </article>
+
+        <article class="trabajo">
+          <img
+            src="https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=700&q=80"
+            alt="Silla de diseño">
+          <h3>Sillas</h3>
+        </article>
+
+        <article class="trabajo">
+          <img
+            src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=700&q=80"
+            alt="Habitación con muebles">
+          <h3>Cabeceros y decoración</h3>
+        </article>
+      </div>
+    </section>
+
+    <section id="nosotros">
+      <h2>Sobre TapiceríaNicoD</h2>
+      <p>
+        Trabajamos para devolverles vida a tus muebles,
+        combinando comodidad, buenos acabados y diseños
+        que se adaptan a tus necesidades.
+      </p>
+      <p>¡Tu idea, nuestro trabajo!</p>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctanos</h2>
+      <p>
+        ¿Quieres renovar tus muebles?
+        Escríbenos para solicitar tu presupuesto.
+      </p>
+
+      <a class="boton"
+         href="https://wa.me/573106793619"
+         target="_blank"
+         rel="noopener noreferrer">
+        Contactar por WhatsApp
+      </a>
+      <p>Reemplaza el número del enlace por tu número real.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p><span>TapiceríaNicoD</span> | Calidad, confort y estilo.</p>
+    <p>© 2026 Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>
